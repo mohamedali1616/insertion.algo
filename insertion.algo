@@ -1,0 +1,15 @@
+PROCEDURE insertion(var arr : array_name : ARRAY_OF INTEGER[];)
+VAR
+    arr / array_name : ARRAY_OF INTEGER[];
+    i,j,card:INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length STEP 1  DO
+        card=arr[i];
+        j=i;
+        WHILE (j>0 and arr[j-1]>card) DO
+            arr[j]=arr[j-1];
+            j=j-1;
+        END_WHILE
+        arr[j] =card;
+    END_FOR
+END
